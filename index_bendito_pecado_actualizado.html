@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#100c0f"><title>Bendito Pecado | Catálogo</title>
+<style>
+:root{--bg:#100c0f;--panel:#1b1419;--gold:#c7a56a;--cream:#f3e9dc;--muted:#b8a9ae;--line:#3b2932}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#100c0fee;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font:22px Georgia,serif;letter-spacing:2px;color:var(--gold)}.brand small{display:block;font:9px Arial;letter-spacing:4px;color:var(--muted);margin-top:4px}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.hero{padding:82px 0;background:radial-gradient(ellipse at 80% 20%,#54253655,transparent 45%),linear-gradient(135deg,#1b1218,#100c0f 70%);border-bottom:1px solid var(--line)}.eyebrow{font-size:10px;color:var(--gold);letter-spacing:4px;text-transform:uppercase}.hero h1{font:clamp(40px,7vw,72px)/1.02 Georgia,serif;margin:18px 0;max-width:720px}.hero p{max-width:560px;color:var(--muted);line-height:1.7;font-size:14px}.btn{display:inline-block;margin-top:16px;background:var(--gold);color:#171014;padding:13px 22px;font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
+section{padding:58px 0}.heading{margin-bottom:24px}.heading h2{font:36px Georgia,serif;margin:9px 0}.heading p{color:var(--muted);font-size:13px;line-height:1.6;max-width:620px}
+.pills{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.pill{border:1px solid var(--line);background:none;color:var(--muted);padding:10px 14px;cursor:pointer;font-size:12px}.pill.active,.pill:hover{border-color:var(--gold);color:var(--gold);background:#c7a56a12}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);overflow:hidden}.photo{height:260px;background:linear-gradient(145deg,#30232a,#171116);display:flex;align-items:center;justify-content:center;color:#9a858e;font:11px Georgia,serif;letter-spacing:2px}.photo img{width:100%;height:100%;object-fit:cover;display:block}.details{padding:17px}.kicker{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}.details h3{font:23px Georgia,serif;margin:8px 0}.details p{font-size:12px;line-height:1.55;color:var(--muted);min-height:34px}.details .contact{display:inline-block;margin-top:8px;color:var(--gold);font-size:11px;letter-spacing:1px;border-bottom:1px solid #c7a56a66;padding-bottom:5px}
+.empty{padding:30px;border:1px dashed var(--line);color:var(--muted);font-size:13px;line-height:1.7;grid-column:1/-1}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.cat{background:var(--panel);border:1px solid var(--line);padding:20px}.cat h3{font:20px Georgia,serif;margin:0 0 10px}.cat p{font-size:11px;color:var(--muted);line-height:1.6;margin:0}
+.about{background:#171116;border-block:1px solid var(--line)}.aboutinner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about h2{font:38px Georgia,serif}.about p{font-size:13px;line-height:1.8;color:var(--muted)}
+footer{padding:32px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot strong{color:var(--gold)}.small{font-size:10px;color:#8f7e85;line-height:1.6;margin-top:16px}
+@media(max-width:760px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.hero{padding:60px 0}.cards{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.aboutinner{grid-template-columns:1fr;gap:8px}.photo{height:200px}}
+@media(max-width:480px){.cards{gap:9px}.photo{height:155px}.details{padding:12px}.details h3{font-size:18px}.categories{gap:8px}.cat{padding:14px}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="#inicio">BENDITO PECADO<small>ATREVIDAMENTE AUTÉNTICO</small></a><nav><a href="#inicio">Inicio</a><a href="#jockstraps">Jockstraps</a><a href="#categorias">Categorías</a><a href="#esencia">Nuestra esencia</a><a href="#contacto">Contacto</a></nav></div></header>
+<main><section class="hero" id="inicio"><div class="wrap"><div class="eyebrow">Una experiencia íntima, a tu manera</div><h1>El deseo también<br>tiene estilo.</h1><p>Descubre colecciones pensadas para expresar tu esencia. Una selección de estilo, actitud y autenticidad, con atención cercana y discreta.</p><a class="btn" href="#jockstraps">Explorar colección</a></div></section>
+<section id="jockstraps"><div class="wrap"><div class="heading"><div class="eyebrow">Ropa interior · Colección destacada</div><h2>Jockstraps</h2><p>Explora las líneas tradicional, deportiva y sintética. Las fotografías se cargan desde la carpeta <b>imagenes</b> del mismo repositorio que contiene este archivo.</p></div><div class="pills" id="groups"></div><div class="cards" id="cards"></div><p class="small">Para que una foto aparezca, conserva exactamente la ruta y el nombre del archivo, respetando mayúsculas y minúsculas. Ejemplos: <b>imagenes/Urban.jpg</b> e <b>imagenes/Hipless.jpg</b>.</p></div></section>
+<section id="categorias"><div class="wrap"><div class="heading"><div class="eyebrow">Descubre más</div><h2>Categorías</h2></div><div class="categories" id="categoryGrid"></div><p class="small">La sección Popper queda como clasificación del catálogo y no habilita pedidos ni promoción hasta verificar la normativa aplicable y las reglas de la plataforma y del medio de pago.</p></div></section>
+<section class="about" id="esencia"><div class="wrap aboutinner"><div><div class="eyebrow">Nuestra esencia</div><h2>Discreción.<br>Actitud. Libertad.</h2></div><p>Bendito Pecado es un espacio para explorar el bienestar íntimo sin prejuicios. Queremos que encuentres productos que conecten contigo, con información clara y atención cercana. Tu elección y tu privacidad importan.</p></div></section></main>
+<footer id="contacto"><div class="wrap foot"><div><strong>BENDITO PECADO</strong><br>Atención y pedidos por WhatsApp</div><div><a href="https://wa.me/573054759007" target="_blank" rel="noopener">WhatsApp +57 305 475 9007</a><br><a href="https://www.instagram.com/bendito_pecado_sx/" target="_blank" rel="noopener">Instagram @bendito_pecado_sx</a></div><div>Catálogo sujeto a disponibilidad.</div></div></footer>
+<script>
+const collections = [{"group": "Tradicional", "name": "Clásico", "image": null}, {"group": "Tradicional", "name": "Classic Lace", "image": null}, {"group": "Tradicional", "name": "Color", "image": null}, {"group": "Tradicional", "name": "Hipless", "image": "imagenes/Hipless.jpg"}, {"group": "Deportivo", "name": "SoftFit", "image": null}, {"group": "Deportivo", "name": "Air", "image": null}, {"group": "Deportivo", "name": "Flex", "image": null}, {"group": "Deportivo", "name": "Urbano", "image": "imagenes/Urban.jpg"}, {"group": "Deportivo", "name": "Dimension", "image": null}, {"group": "Sintético", "name": "Shadow", "image": null}, {"group": "Sintético", "name": "Cargo", "image": null}];
+const categoryData = [["Ropa interior", ["Jockstrap", "Camisas", "Arneses"]], ["Juguetería sexual", ["Dildos", "Vibradores", "Anillos", "Masturbadores", "Plugs", "BDSM"]], ["Lubricantes", ["Base de agua", "Gel", "Aceite"]], ["Popper", ["Nacionales", "Importados"]]];
+let activeGroup = "Todas";
+const groupsEl=document.getElementById("groups"), cardsEl=document.getElementById("cards");
+function render(){
+ const groupNames=["Todas",...new Set(collections.map(x=>x.group))];
+ groupsEl.innerHTML=groupNames.map(g=>`<button class="pill ${activeGroup===g?'active':''}" data-group="${g}">${g}</button>`).join("");
+ groupsEl.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{activeGroup=b.dataset.group;renderCards();renderButtons()}));
+ renderCards();
+}
+function renderButtons(){
+ groupsEl.querySelectorAll("button").forEach(b=>b.classList.toggle("active",b.dataset.group===activeGroup));
+}
+function renderCards(){
+ const shown=collections.filter(x=>activeGroup==="Todas"||x.group===activeGroup);
+ cardsEl.innerHTML=shown.map(x=>{
+ const photo=x.image?`<img src="${x.image}" alt="Jockstrap ${x.name}" loading="lazy" onerror="this.parentElement.textContent='FOTOGRAFÍA PENDIENTE'">`:"FOTOGRAFÍA PENDIENTE";
+ const msg=encodeURIComponent(`Hola, Bendito Pecado. Quiero información sobre la colección Jockstrap ${x.name}.`);
+ return `<article class="card"><div class="photo">${photo}</div><div class="details"><div class="kicker">${x.group}</div><h3>${x.name}</h3><p>Conoce esta línea de nuestra colección Jockstrap.</p><a class="contact" href="https://wa.me/573054759007?text=${msg}" target="_blank" rel="noopener">Consultar por WhatsApp ↗</a></div></article>`;
+ }).join("");
+}
+document.getElementById("categoryGrid").innerHTML=categoryData.map(([name,items])=>`<article class="cat"><h3>${name}</h3><p>${items.join(" · ")}</p></article>`).join("");
+render();
+</script></body></html>
