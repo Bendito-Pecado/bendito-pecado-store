@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bendito Pecado | Prueba visual del catálogo</title>
+<style>
+:root{--bg:#100c0f;--panel:#1b1419;--gold:#c7a56a;--cream:#f3e9dc;--muted:#b8a9ae;--line:#3b2932}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,sans-serif}.wrap{width:min(1160px,92%);margin:auto}
+header{padding:22px 0;border-bottom:1px solid var(--line)}.brand{font:22px Georgia,serif;letter-spacing:2px;color:var(--gold)}.brand small{display:block;font:9px Arial;letter-spacing:4px;color:var(--muted);margin-top:5px}
+.hero{padding:55px 0 38px;background:radial-gradient(ellipse at 80% 20%,#54253655,transparent 45%)}.eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}.hero h1{font:clamp(38px,6vw,62px)/1.05 Georgia,serif;margin:15px 0}.hero p{color:var(--muted);line-height:1.7;max-width:680px;font-size:14px}
+h2{font:30px Georgia,serif;margin:8px 0 22px}.filters{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 14px;cursor:pointer}.filter.active{border-color:var(--gold);color:var(--gold);background:#c7a56a12}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px}.card{background:var(--panel);border:1px solid var(--line);overflow:hidden}.photo{height:280px;background:linear-gradient(145deg,#30232a,#171116);display:flex;align-items:center;justify-content:center;color:#a9959d;font:11px Georgia,serif;letter-spacing:2px;text-align:center;padding:16px}.photo img{width:100%;height:100%;object-fit:cover;display:block}.info{padding:16px}.tag{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}.info h3{font:22px Georgia,serif;margin:8px 0}.info p{color:var(--muted);font-size:12px;line-height:1.5}.note{font-size:11px;color:#9b8990;line-height:1.6;margin-top:-38px;margin-bottom:45px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.photo{height:210px}}@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:9px}.photo{height:160px}.info{padding:12px}.info h3{font-size:17px}}
+</style></head><body>
+<header><div class="wrap"><div class="brand">BENDITO PECADO<small>ATREVIDAMENTE AUTÉNTICO · VERSIÓN DE PRUEBA</small></div></div></header>
+<main class="wrap"><section class="hero"><div class="eyebrow">Vista previa de imágenes</div><h1>El deseo también<br>tiene estilo.</h1><p>Prueba visual de las colecciones de Jockstraps. Se utiliza la fotografía real disponible en el repositorio para comprobar cómo se verá dentro de las tarjetas del catálogo. Las demás referencias aparecen como espacios de imagen pendientes.</p></section>
+<section><div class="eyebrow">Ropa interior · Colección destacada</div><h2>Jockstraps</h2><div class="filters" id="filters"></div><div class="grid" id="cards"></div><p class="note">La imagen de Urban se carga desde <b>imagenes/Urban.jpg</b>. Hipless aún no tiene un archivo disponible en esa ruta; las otras colecciones esperan sus fotografías reales. Esta es una página de prueba independiente y no reemplaza el catálogo principal.</p></section>
+</main>
+<script>
+const items=[
+{group:"Tradicional",name:"Clásico",image:""},
+{group:"Tradicional",name:"Classic Lace",image:""},
+{group:"Tradicional",name:"Color",image:""},
+{group:"Tradicional",name:"Hipless",image:""},
+{group:"Deportivo",name:"SoftFit",image:""},
+{group:"Deportivo",name:"Air",image:""},
+{group:"Deportivo",name:"Flex",image:""},
+{group:"Deportivo",name:"Urbano",image:"https://raw.githubusercontent.com/Bendito-Pecado/bendito-pecado-store/main/imagenes/Urban.jpg"},
+{group:"Deportivo",name:"Dimension",image:""},
+{group:"Sintético",name:"Shadow",image:""},
+{group:"Sintético",name:"Cargo",image:""}
+];
+let active="Todas";const filters=document.getElementById("filters"),cards=document.getElementById("cards");
+function render(){
+const groups=["Todas",...new Set(items.map(x=>x.group))];
+filters.innerHTML=groups.map(g=>'<button class="filter '+(g===active?'active':'')+'" data-g="'+g+'">'+g+'</button>').join("");
+filters.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{active=b.dataset.g;render()}));
+const shown=items.filter(x=>active==="Todas"||x.group===active);
+cards.innerHTML=shown.map(x=>'<article class="card"><div class="photo">'+(x.image?'<img src="'+x.image+'" alt="Jockstrap '+x.name+'" onerror="this.parentElement.textContent=\'No se pudo cargar la imagen\'">':'FOTOGRAFÍA PENDIENTE')+'</div><div class="info"><div class="tag">'+x.group+'</div><h3>'+x.name+'</h3><p>Vista de prueba de la colección '+x.name+'.</p></div></article>').join("");
+}
+render();
+</script></body></html>
