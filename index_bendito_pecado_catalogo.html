@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#120d10">
+<title>Bendito Pecado | Catálogo</title>
+<style>
+:root{--bg:#100c0f;--panel:#1b1419;--panel2:#241a20;--gold:#c7a56a;--cream:#f3e9dc;--muted:#b8a9ae;--wine:#64283b;--line:#3b2932}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#100c0fee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-family:Georgia,serif;font-size:22px;letter-spacing:2px;color:var(--gold)}.brand small{display:block;font:9px Arial;letter-spacing:4px;color:var(--muted);margin-top:4px}
+nav{display:flex;gap:22px;color:var(--muted);font-size:13px}nav a:hover{color:var(--gold)}
+.hero{padding:82px 0 72px;background:radial-gradient(ellipse at 80% 30%,#54253655,transparent 45%),linear-gradient(135deg,#191116,#100c0f 65%);border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:10px}.hero h1{font:clamp(38px,7vw,70px)/1.03 Georgia,serif;max-width:700px;margin:18px 0}.hero p{color:var(--muted);line-height:1.7;max-width:540px}.cta{display:inline-block;margin-top:18px;background:var(--gold);color:#171014;padding:13px 22px;border-radius:2px;font-weight:bold;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+section{padding:58px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.section-head h2{font:34px Georgia,serif;margin:8px 0}.section-head p{color:var(--muted);font-size:13px;line-height:1.5;max-width:440px}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 28px}.filter{background:transparent;border:1px solid var(--line);color:var(--muted);padding:10px 14px;border-radius:2px;cursor:pointer;font-size:12px}.filter.active,.filter:hover{border-color:var(--gold);color:var(--gold);background:#c7a56a12}
+.subfilters{display:flex;gap:8px;flex-wrap:wrap;margin:-12px 0 25px}.subfilter{border:0;background:transparent;color:#a9969e;text-decoration:underline;text-underline-offset:4px;cursor:pointer;font-size:12px;padding:5px}.subfilter.active{color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:var(--panel);border:1px solid var(--line);min-width:0;overflow:hidden}.photo{height:245px;background:linear-gradient(145deg,#2b2026,#171116);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#8d7a82;font:12px Georgia,serif;letter-spacing:2px}.photo img{width:100%;height:100%;object-fit:cover;display:block}.info{padding:17px}.tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}.info h3{font:22px Georgia,serif;margin:8px 0}.info p{color:var(--muted);font-size:12px;line-height:1.55;min-height:36px}.meta{color:#9c8991;font-size:11px;margin:12px 0}.ask{display:inline-block;margin-top:5px;color:var(--gold);font-size:11px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #c7a56a66;padding-bottom:5px}
+.empty{grid-column:1/-1;border:1px dashed var(--line);padding:30px;color:var(--muted);text-align:center;line-height:1.7}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category{padding:22px 18px;background:var(--panel);border:1px solid var(--line)}.category b{font:19px Georgia,serif;color:var(--cream)}.category span{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:8px}
+.about{background:#171116;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about h2{font:36px Georgia,serif}.about p{color:var(--muted);line-height:1.8;font-size:13px}
+footer{padding:35px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot strong{color:var(--gold)}
+.note{font-size:10px;color:#8f7e85;line-height:1.5;margin-top:15px}
+@media(max-width:760px){.nav{height:auto;padding:15px 0;align-items:flex-start;flex-direction:column}nav{gap:15px;flex-wrap:wrap}.hero{padding:60px 0}.grid{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.about-inner{grid-template-columns:1fr;gap:10px}.photo{height:190px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr;gap:9px}.photo{height:155px}.info{padding:12px}.info h3{font-size:17px}.info p{font-size:11px}.category-grid{grid-template-columns:1fr 1fr}.section-head{display:block}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#inicio">BENDITO PECADO<small>ATREVIDAMENTE AUTÉNTICO</small></a><nav><a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#categorias">Categorías</a><a href="#esencia">Nuestra esencia</a><a href="#contacto">Contacto</a></nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap"><div class="eyebrow">Una experiencia íntima, a tu manera</div><h1>El deseo también<br>tiene estilo.</h1><p>Explora una selección pensada para expresar tu esencia, descubrir nuevas sensaciones y elegir con confianza. Discreción, actitud y autenticidad.</p><a class="cta" href="#catalogo">Explorar catálogo</a></div></section>
+<section id="catalogo"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Selección Bendito Pecado</div><h2>Explora el catálogo</h2></div><p>Selecciona una categoría para descubrir las colecciones. Los productos se mostrarán aquí cuando se incorporen sus datos y fotografías reales.</p></div>
+<div class="filters" id="mainFilters"></div><div class="subfilters" id="subFilters"></div><div class="grid" id="productGrid"></div>
+<p class="note">Las fotografías se cargan desde la carpeta de imágenes del repositorio. Los productos de ejemplo del archivo Excel no se publican como referencias reales.</p>
+</div></section>
+<section id="categorias"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Encuentra tu estilo</div><h2>Categorías</h2></div></div><div class="category-grid">
+<div class="category"><b>Ropa interior</b><span>Jockstraps, camisas y arneses.</span></div>
+<div class="category"><b>Juguetería sexual</b><span>Dildos, vibradores, anillos, masturbadores, plugs y BDSM.</span></div>
+<div class="category"><b>Lubricantes</b><span>Base de agua, gel y aceite; neutros, sabores y sensaciones térmicas.</span></div>
+<div class="category"><b>Popper</b><span>La hoja de cálculo contempla líneas nacionales e importadas. Su eventual publicación o comercialización requiere verificación legal y de las reglas de la plataforma y del medio de pago.</span></div>
+</div></div></section>
+<section class="about" id="esencia"><div class="wrap about-inner"><div><div class="eyebrow">Nuestra esencia</div><h2>Discreción.<br>Actitud. Libertad.</h2></div><p>Bendito Pecado es un espacio para explorar el bienestar íntimo sin prejuicios. Queremos que encuentres productos que conecten contigo, con información clara y atención cercana. Tu elección y tu privacidad importan.</p></div></section>
+</main>
+<footer id="contacto"><div class="wrap foot"><div><strong>BENDITO PECADO</strong><br>Atención y pedidos por WhatsApp</div><div><a href="https://wa.me/573054759007" target="_blank" rel="noopener">WhatsApp +57 305 475 9007</a><br><a href="https://www.instagram.com/bendito_pecado_sx/" target="_blank" rel="noopener">Instagram @bendito_pecado_sx</a></div><div>Catálogo sujeto a disponibilidad.</div></div></footer>
+<script>
+// Catálogo inicial: el Excel recibido contiene estructura y filas ilustrativas,
+// no registros de productos reales publicables. Añade aquí los productos reales.
+const products = [];
+const categories = [
+ {name:"Todos",subs:[]},
+ {name:"Jockstrap",subs:["Tradicional","Deportivo","Sintético"]},
+ {name:"Camisas",subs:[]},{name:"Arneses",subs:[]},
+ {name:"Dildos",subs:[]},{name:"Vibradores",subs:[]},{name:"Anillos",subs:[]},
+ {name:"Masturbadores",subs:[]},{name:"Plugs",subs:[]},{name:"BDSM",subs:[]},
+ {name:"Lubricantes",subs:["Base de agua","Gel","Aceite"]},
+ {name:"Popper",subs:["Nacionales","Importados"]}
+];
+let selected="Todos", selectedSub="Todos";
+const main=document.getElementById("mainFilters"), sub=document.getElementById("subFilters"), grid=document.getElementById("productGrid");
+function renderFilters(){
+ main.innerHTML=categories.map(c=>`<button class="filter ${selected===c.name?'active':''}" data-cat="${c.name}">${c.name}</button>`).join("");
+ const current=categories.find(c=>c.name===selected);
+ sub.innerHTML=(current?.subs||[]).map(s=>`<button class="subfilter ${selectedSub===s?'active':''}" data-sub="${s}">${s}</button>`).join("");
+ main.querySelectorAll("button").forEach(b=>b.onclick=()=>{selected=b.dataset.cat;selectedSub="Todos";render()});
+ sub.querySelectorAll("button").forEach(b=>b.onclick=()=>{selectedSub=b.dataset.sub;render()});
+}
+function renderProducts(){
+ const shown=products.filter(p=>(selected==="Todos"||p.category===selected)&&(selectedSub==="Todos"||p.subcategory===selectedSub));
+ if(!shown.length){grid.innerHTML='<div class="empty">Esta colección está preparada para recibir tus productos.<br>Agrega los datos reales y la fotografía correspondiente en el catálogo para que aparezcan aquí.</div>';return}
+ grid.innerHTML=shown.map(p=>{
+ const img=p.image?`<img src="${p.image}" alt="${p.name}" onerror="this.parentElement.textContent='FOTOGRAFÍA PENDIENTE'">`:'FOTOGRAFÍA PENDIENTE';
+ const price=p.promo?`<s>$${Number(p.price).toLocaleString('es-CO')}</s> $${Number(p.promo).toLocaleString('es-CO')}`:(p.price?`$${Number(p.price).toLocaleString('es-CO')}`:"Consultar disponibilidad");
+ const msg=encodeURIComponent(`Hola, Bendito Pecado. Quiero información sobre ${p.name}.`);
+ return `<article class="card"><div class="photo">${img}</div><div class="info"><div class="tag">${p.category}${p.subcategory?' · '+p.subcategory:''}</div><h3>${p.name}</h3><p>${p.description||''}</p><div class="meta">${p.sizes?'Tallas: '+p.sizes+' · ':''}${p.colors?'Colores: '+p.colors:''}</div><strong>${price}</strong><br><a class="ask" href="https://wa.me/573054759007?text=${msg}" target="_blank" rel="noopener">Consultar por WhatsApp ↗</a></div></article>`;
+ }).join("");
+}
+function render(){renderFilters();renderProducts()}render();
+</script>
+</body></html>
